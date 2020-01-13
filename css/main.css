@@ -1,0 +1,639 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-attachment: fixed;
+  background-color: #081B45;
+  background-image: url(../assets/achtergrond.svg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.width-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 80vw;
+}
+
+/* Header */
+header {
+  background: #081B45;
+  border-bottom: 2px solid #FF6545;
+  display: flex;
+  justify-content: center;
+  padding: 2.5em;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+header nav ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+header nav li {
+  display: list-item;
+  margin-right: 3.125em;
+}
+
+header nav li:last-of-type {
+  margin-right: 0;
+}
+
+header nav a {
+  color: #fff;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+header nav a:hover {
+  color: #FF6545;
+  transition: 0.2s ease-in;
+}
+
+header nav a:focus {
+  color: #FF6545;
+  outline: none;
+}
+
+.active {
+  color: #FF6545;
+}
+
+header nav img {
+  height: 1.5em;
+}
+
+.logo {
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+.logo:hover {
+  text-shadow: 1.5px 1.5px 0 #FF6545;
+  transition: 0.2s ease-in;
+}
+
+.logo:focus {
+  color: #FF6545;
+  outline: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.fa-envelope {
+  display: none;
+}
+
+.icon {
+  display: none;
+  transition: 0.2s ease-out;
+}
+
+.icon img {
+  height: 2.25em;
+}
+
+@media (max-width: 37.5em) {
+  .logo {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+  }
+
+  .menu-text {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Section (Content) */
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 80vw;
+  min-height: 100%;
+  padding: 3.125em;
+}
+
+section .intro-tekst h1 {
+  font-size: 2em;
+  font-weight: 900;
+  margin-top: .5em;
+}
+
+section p {
+  font-weight: lighter;
+  line-height: 1.7em;
+  margin-top: .6em;
+}
+
+p::selection {
+  color: #FF6545;
+}
+
+.intro-tekst {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 3em;
+}
+
+.intro-img {
+  background-blend-mode: multiply;
+  background-color: rgba(8, 27, 69, 0.7);
+  background-image: url(../assets/ninja.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  padding-bottom: 1.875em;
+  position: relative;
+  width: 80vw;
+}
+
+.pipe-img {
+  background-image: url(../assets/pipeslider.jpg);
+}
+
+.intro-img h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  font-weight: lighter;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 79.5em) {
+  .intro-img h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 53.125em) {
+  .intro-img h1 {
+    font-size: 1.5em;
+  }
+}
+
+.intro-img h1 span {
+  text-shadow: 2px 2px 0 #FF6545;
+}
+
+.ninja {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+button {
+  background: #081B45;
+  border: 2px solid #FF6545;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Roboto', cursive;
+  font-size: 1em;
+  margin-top: 1em;
+  padding: .75em;
+  transition: 0.2s ease-out;
+  width: 17vh;
+}
+
+button a {
+  color: #fff;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+button a:focus {
+  color: #FF6545;
+  outline: none;
+}
+
+button:hover {
+  background: #FF6545;
+  transition: 0.2s ease-in;
+}
+
+button:focus {
+  background: #FF6545;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #fff;
+}
+
+/* Items */
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.items a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.items a:focus {
+  color: #FF6545;
+  outline: none;
+}
+
+.item {
+  background: #081B45;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 30vh;
+  justify-content: center;
+  margin-top: 3em;
+  text-align: center;
+  transition: 0.2s ease-out;
+  width: 23vw;
+}
+
+@media (max-width: 60em) {
+  .items {
+    flex-direction: column;
+  }
+
+  .item {
+    margin: 2em 0;
+    width: 100%;
+  }
+}
+
+.item:hover {
+  box-shadow: 5px 5px 0 #FF6545;
+  transition: 0.2s ease-in;
+}
+
+.item p {
+  padding: .5em;
+}
+
+.item h1 {
+  font-size: 2em;
+}
+
+.pipe {
+  background-image: url(../assets/pipe.png);
+}
+
+.rope {
+  background-image: url(../assets/rope.png);
+}
+
+.step {
+  background-image: url(../assets/step.png);
+}
+
+.wall {
+  background-image: url(../assets/wall.png);
+}
+
+.tarzan {
+  background-image: url(../assets/tarzan.png);
+}
+
+.bars {
+  background-image: url(../assets/bars.png);
+}
+
+.quad {
+  background-image: url(../assets/quad.png);
+}
+
+.cross {
+  background-image: url(../assets/cross.png);
+}
+
+.spider {
+  background-image: url(../assets/spider.png);
+}
+
+.titel {
+  font-size: 2em;
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+.titel span {
+  font-size: .5em;
+  font-style: italic;
+}
+
+/* Detail pagina */
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: 35vw 10vw 35vw;
+  margin-top: 1em;
+}
+
+.grid-container-3 {
+  display: grid;
+  grid-template-columns: 20vw 10vw 20vw 10vw 20vw;
+}
+
+@media (max-width: 37.5em) {
+  .grid-container-2 {
+    grid-template-columns: 80vw;
+  }
+
+  .grid-container-3 {
+    grid-template-columns: 80vw;
+  }
+
+  .faciliteit {
+    grid-column-end: 1;
+    margin-top: 2em;
+  }
+
+  .niveau {
+    grid-column-end: 1;
+  }
+
+  .beoordeling {
+    grid-column-end: 1;
+  }
+}
+
+.grid-container-2 h3 {
+  color: #FF6545;
+}
+
+.grid-container-3 h3 {
+  color: #FF6545;
+}
+
+.omschrijving {
+  grid-column-start: 1;
+}
+
+.faciliteit {
+  grid-column-start: 3;
+}
+
+.sportschool {
+  grid-column-start: 1;
+  margin-top: 2em;
+}
+
+.sportschool p {
+  line-height: normal;
+}
+
+.niveau {
+  grid-column-start: 3;
+  margin-top: 2em;
+}
+
+.beoordeling {
+  grid-column-start: 5;
+  margin-top: 2em;
+}
+
+.beoordeling img {
+  margin-top: .6em;
+  width: 6.2em;
+}
+
+/* Contact */
+form {
+  display: block;
+  width: 50vw;
+  margin-top: 1em;
+}
+
+fieldset {
+  border: 2px solid #FF6545;
+  background-color: #081B45;
+  padding: 1em;
+}
+
+legend {
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+label {
+  display: inline-block;
+}
+
+#gender{
+  display: block;
+}
+
+#gender label{
+  margin-left: .5em;
+}
+
+.gender:first-of-type{
+  margin:0;
+}
+
+.gender{
+  display: inline-block;
+  width: auto;
+  margin-left: 2em;
+}
+
+input {
+  border: 2px solid #FF6545;
+  background-color: #243355;
+  color: #fff;
+  display: block;
+  height: 2em;
+  padding: .5em 1em;
+  margin-bottom: 1.5em;
+  margin-top: .2em;
+  width: 50vw;
+  transition: .5s ease-out;
+}
+
+input::placeholder{
+  color: #fff;
+}
+
+input:focus{
+  background-color: #081B45;
+  transition: .5s ease-in;
+}
+
+input:valid {
+  border-color: lightgreen;
+  background-color: #081B45;
+}
+input:invalid {
+  border: 2px solid red;
+  background-color: #243355;
+}
+
+aside{
+  display: grid;
+  grid-column-start: 3;
+  margin-top: 1em;
+  position: relative;
+  width: 20vw;
+}
+
+aside i{
+  color: #FF6545;
+  margin-right: 1em;
+}
+
+.form-container-2 {
+  display: grid;
+  grid-template-columns: 50vw 10vw 20vw;
+}
+
+@media (max-width: 60em) {
+  .form-container-2 {
+    grid-template-columns: 80vw;
+  }
+  form{
+    width: auto;
+  }
+  aside{
+    display: none;
+  }
+}
+
+/* Footer */
+footer {
+  background: #081B45;
+  border-top: 2px solid #FF6545;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+footer div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+footer p {
+  color: #fff;
+}
+
+@media (max-width: 31.25em) {
+  footer p:first-of-type {
+    margin-bottom: .5em;
+  }
+
+  footer div {
+    justify-content: center;
+  }
+}
+
+footer p a {
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-weight: 900;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+footer p a:hover {
+  text-shadow: 1px 1px 0 #FF6545;
+  transition: 0.2s ease-in;
+}
+
+footer p a:focus {
+  color: #FF6545;
+  outline: none;
+}
+
+/* Klik animatie */
+/* Bron: https://ianlunn.github.io/Hover/ */
+@keyframes beweging {
+  16.65% {
+    transform: translate(8px, 8px);
+  }
+
+  33.3% {
+    transform: translate(-6px, -6px);
+  }
+
+  49.95% {
+    transform: translate(4px, 4px);
+  }
+
+  66.6% {
+    transform: translate(-2px, -2px);
+  }
+
+  83.25% {
+    transform: translate(1px, 1px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.beweging {
+  cursor: help;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  vertical-align: middle;
+}
+
+.beweging:hover, .beweging:focus, .beweging:active {
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-name: beweging;
+  animation-timing-function: ease-in-out;
+}
+
+.klik {
+  cursor: help;
+}
