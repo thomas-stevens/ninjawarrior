@@ -465,7 +465,7 @@ label {
 }
 
 #gender{
-  display: block;
+  display: inline-block;
 }
 
 #gender label{
