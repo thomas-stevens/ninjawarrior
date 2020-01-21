@@ -8,7 +8,7 @@
   <title>Ninja Warrior | Obstakel Parkour</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/main.css" />
 
   <!-- FONTS -->
   <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap" rel="stylesheet">
@@ -49,9 +49,9 @@
 
   </header>
 
-<main>
+  <main>
 
-  <section>
+    <section>
 
       <h1 class="titel">Contact</h1>
 
@@ -60,17 +60,26 @@
         <form>
           <fieldset>
             <legend>Gegevens</legend>
-            <label id="gender" for="gender">
-                <input class="gender" id="gender" type="radio" name="gender" value="man"><label for="man">Man</label>
-                <input class="gender" id="gender" type="radio" name="gender" value="vrouw"><label for="vrouw">Vrouw</label>
-            </label>
               <label for="naam">Naam
-                <input id="naam" type="text" name="naam" value="" required placeholder="Vul hier je naam in...">
+                <input id="naam" type="text" name="naam" required="required" placeholder="Vul hier je naam in...">
               </label>
+
               <label for="email">Email
-                <input id="email" type="email" name="email" value="" required placeholder="Vul hier je email in...">
+                <input id="email" type="email" name="email" required="required" placeholder="Vul hier je email in...">
               </label>
+
+              <label for="birthdate">Geboortedatum
+                <input id="birthdate" type="date" name="birthdate" required="required">
+              </label>
+
+              <label class="ontvangen" for="nieuwsbrief">Wil jij onze nieuwsbrief ontvangen?
+                <input id="nieuwsbrief" type="checkbox" name="nieuwsbrief" required="optional">
+              </label>
+
           </fieldset>
+
+          <button type="submit" name="button"><a target="_blank">Verstuur</a></button>
+
         </form>
 
         <aside>
@@ -79,13 +88,11 @@
           <p><i class="fas fa-map-marker-alt"></i> Kerkstraat 412, Amsterdam</p>
         </aside>
 
-        <button type="button" name="button"><a target="_blank">Verstuur</a></button>
-
       </div>
 
-  </section>
+    </section>
 
-</main>
+  </main>
 
   <footer>
     <div>

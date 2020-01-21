@@ -148,7 +148,7 @@ section {
   padding: 3.125em;
 }
 
-section .intro-tekst h1 {
+section .intro-tekst h2 {
   font-size: 2em;
   font-weight: 900;
   margin-top: .5em;
@@ -316,7 +316,7 @@ hr {
   padding: .5em;
 }
 
-.item h1 {
+.item h2 {
   font-size: 2em;
 }
 
@@ -445,7 +445,6 @@ hr {
 /* Contact */
 form {
   display: block;
-  width: 50vw;
   margin-top: 1em;
 }
 
@@ -453,6 +452,12 @@ fieldset {
   border: 2px solid #FF6545;
   background-color: #081B45;
   padding: 1em;
+  transition: .5s ease-out;
+}
+
+fieldset:focus-within{
+    background-color: #243355;
+    transition: .5s ease-in;
 }
 
 legend {
@@ -460,26 +465,8 @@ legend {
   font-weight: bolder;
 }
 
-label {
-  display: inline-block;
-}
-
-#gender{
-  display: inline-block;
-}
-
-#gender label{
-  margin-left: .5em;
-}
-
-.gender:first-of-type{
-  margin:0;
-}
-
-.gender{
-  display: inline-block;
-  width: auto;
-  margin-left: 2em;
+label:first-of-type{
+  display: block;
 }
 
 input {
@@ -491,8 +478,27 @@ input {
   padding: .5em 1em;
   margin-bottom: 1.5em;
   margin-top: .2em;
-  width: 50vw;
   transition: .5s ease-out;
+}
+
+input:last-of-type{
+  margin-top: 0;
+}
+
+#naam, #email{
+  width: 95%;
+}
+
+#nieuwsbrief{
+  display: inline;
+  float: left;
+  margin-right: 1em;
+}
+
+@media (max-width: 30em) {
+  label:last-of-type{
+    font-size: .8em;
+  }
 }
 
 input::placeholder{
@@ -500,13 +506,13 @@ input::placeholder{
 }
 
 input:focus{
-  background-color: #081B45;
+  transform: scale(1.01);
   transition: .5s ease-in;
+  background-color: #081B45;
 }
 
 input:valid {
   border-color: lightgreen;
-  background-color: #081B45;
 }
 input:invalid {
   border: 2px solid red;
@@ -529,17 +535,25 @@ aside i{
 .form-container-2 {
   display: grid;
   grid-template-columns: 50vw 10vw 20vw;
+  grid-template-rows: 50vh 10vh;
 }
 
 @media (max-width: 60em) {
   .form-container-2 {
     grid-template-columns: 80vw;
-  }
-  form{
-    width: auto;
+    grid-template-rows: 50vh 10vh 20vh;
   }
   aside{
-    display: none;
+    margin-top: 2em;
+    grid-row-start: 3;
+    grid-column-start: 1;
+    width: 70vw;
+  }
+  #naam, #email{
+    width: 85%;
+  }
+  button{
+    grid-row-start: 2;
   }
 }
 
